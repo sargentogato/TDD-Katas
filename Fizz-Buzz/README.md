@@ -1,1 +1,1 @@
-Fizz Buzz Kata
+kasta Fizz Buzz with Jest and TDD

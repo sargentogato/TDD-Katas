@@ -1,0 +1,14 @@
+{
+  "name": "fizz-buzz",
+  "version": "1.0.0",
+  "description": "kasta Fizz Buzz with Jest and TDD",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}
