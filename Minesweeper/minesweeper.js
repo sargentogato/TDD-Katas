@@ -5,6 +5,8 @@ const BOARD = [
   ["*", 3, 2, 1],
 ];
 
+const GAME_OVER = "GAME OVER";
+
 class Minesweeper {
   constructor(x, y) {
     this.x = x;
@@ -22,7 +24,7 @@ class Minesweeper {
 
     if (boardPosition === "*") {
       this.initGame(this.x, this.y);
-      return "GAME OVER";
+      return GAME_OVER;
     }
 
     this.myBoard[x - 1][y - 1] = boardPosition;
