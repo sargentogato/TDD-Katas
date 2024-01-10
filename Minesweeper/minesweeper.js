@@ -6,13 +6,11 @@ const BOARD = [
 ];
 
 class Minesweeper {
-  constructor() {
-    this.myBoard = [
-      [".", ".", ".", "."],
-      [".", ".", ".", "."],
-      [".", ".", ".", "."],
-      [".", ".", ".", "."],
-    ];
+  constructor(x, y) {
+    this.x = x;
+    this.y = y;
+    this.myBoard = [];
+    this.initGame(x, y);
   }
 
   returnGame(x, y) {
@@ -21,8 +19,9 @@ class Minesweeper {
     }
 
     let boardPosition = this.returnPosition(x, y);
+
     if (boardPosition === "*") {
-      this.resetGame();
+      this.initGame(this.x, this.y);
       return "GAME OVER";
     }
 
@@ -37,11 +36,11 @@ class Minesweeper {
     return result;
   }
 
-  resetGame() {
+  initGame(x, y) {
     this.myBoard = [];
-    for (let col = 0; col < 4; col++) {
+    for (let col = 0; col < y; col++) {
       this.myBoard.push([]);
-      for (let row = 0; row < 4; row++) {
+      for (let row = 0; row < x; row++) {
         this.myBoard[col].push(".");
       }
     }

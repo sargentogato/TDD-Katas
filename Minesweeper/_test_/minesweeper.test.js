@@ -1,6 +1,6 @@
 const Minesweeper = require("../minesweeper.js");
 
-const Game = new Minesweeper();
+const Game = new Minesweeper(4, 4);
 
 describe("Minesweeper", () => {
   test("return position axis x=1 and axis y=1", () => {
