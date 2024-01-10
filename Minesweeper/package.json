@@ -4,7 +4,7 @@
   "description": "Minesweeper kata  https://zerolivedev.gitlab.io/katayuno-jekill/kata/2022/10/14/Minesweeper.html",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "author": "",
   "license": "ISC",
