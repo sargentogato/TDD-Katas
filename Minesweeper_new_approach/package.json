@@ -1,0 +1,14 @@
+{
+  "name": "minesweeper_new_approach",
+  "version": "1.0.0",
+  "description": "Minesweeper kata  https://zerolivedev.gitlab.io/katayuno-jekill/kata/2022/10/14/Minesweeper.html",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}
