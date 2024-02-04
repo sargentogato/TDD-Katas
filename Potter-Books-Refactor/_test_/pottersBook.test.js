@@ -49,7 +49,7 @@ describe("Potters Book", () => {
     expect(totalPrice).toBe(priceWithDiscount);
   });
 
-  test("apply discount just to a different books", () => {
+  test("apply discount just to a two grup different books", () => {
     //Arrange
     const booksBought = [1, 1, 2, 2];
     const priceWithDiscount = 30.4;
@@ -61,10 +61,22 @@ describe("Potters Book", () => {
     expect(totalPrice).toBe(priceWithDiscount);
   });
 
-  test("apply discount just to a two grup different books", () => {
+  test("apply discount to all the different group of books", () => {
     //Arrange
-    const booksBought = [1, 1, 2, 2];
-    const priceWithDiscount = 30.4;
+    const booksBought = [1, 1, 2, 2, 3];
+    const priceWithDiscount = 36.8;
+
+    //Action
+    const totalPrice = calculatePrice(booksBought);
+
+    //Assert
+    expect(totalPrice).toBe(priceWithDiscount);
+  });
+
+  test("apply discount to all the different group of books and add the price of one book", () => {
+    //Arrange
+    const booksBought = [1, 1, 2, 2, 3, 1];
+    const priceWithDiscount = 44.8;
 
     //Action
     const totalPrice = calculatePrice(booksBought);

@@ -9,29 +9,8 @@ const DISCOUNT = {
   7: 0.5,
 };
 
-const log = console.log;
-
-const calculatePrice = (quantityOfbooks) => {
-  if (quantityOfbooks.length === 0 || typeof quantityOfbooks[0] !== "number")
-    return 0;
-  if (quantityOfbooks.length === 1) return PRICE_UNIT;
-
-  let result = 0;
-
-  const noRepeatedBooks = [...new Set(quantityOfbooks)].length;
-  result = PRICE_UNIT * noRepeatedBooks * DISCOUNT[noRepeatedBooks];
-
-  if (quantityOfbooks.length !== noRepeatedBooks) {
-    let individualBooks = quantityOfbooks.length - noRepeatedBooks;
-    result += individualBooks * PRICE_UNIT;
-  }
-
-  return Number(result.toFixed(1));
-};
-
 /* ************************************************************************************************************************* */
-const calculatePrice3 = (quantityOfbooks) => {
-  //const quantityOfbooks = [1, 1, 2, 2];
+const calculatePrice1 = (quantityOfbooks) => {
   let arrayObjetos = [];
 
   // Crear un objeto para almacenar la cantidad de cada número
@@ -76,9 +55,10 @@ const calculatePrice3 = (quantityOfbooks) => {
 
 /* ****************************************************************************************************************************** */
 
-const calculatePrice4 = (quantityOfbooks) => {
-  if (quantityOfbooks.length === 0 || typeof quantityOfbooks[0] !== "number")
+const calculatePrice2 = (quantityOfbooks) => {
+  if (quantityOfbooks.length === 0 || typeof quantityOfbooks[0] !== "number") {
     return 0;
+  }
 
   const copyQuantityOfBooks = [...quantityOfbooks];
   const tempShoppingBasket = [];
@@ -103,11 +83,11 @@ const calculatePrice4 = (quantityOfbooks) => {
           (bookQuantity > 1 ? DISCOUNT[bookQuantity] : NO_DISCOUNT)
       );
     },
-    0
+    0,
   );
   return result;
 };
 
 /* **************************************************************************************************************************** */
 
-module.exports = calculatePrice4;
+module.exports = calculatePrice2;
