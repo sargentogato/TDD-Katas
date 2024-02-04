@@ -4,4 +4,4 @@ Katas to practice TDD
 
 To run the test, you have to install jest library testing in each kata directory.
 
-Each kata it is an separated repository, so the instalation oft jest hast to be inside the directory you would like to run the test
+Each kata it is an separated repository, so the instalation of jest has to be inside the directory you would like to run the test
